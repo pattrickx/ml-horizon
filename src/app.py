@@ -12,13 +12,13 @@ async def summarize(request: Request) -> JSONResponse:
             raise Exception("invalid body, text not found")
         
     except Exception as e:
-        return JSONResponse({"ERROR":e},status_code=400)
+        return JSONResponse({"ERROR":e},status_code=500)
     
     try: 
         summy_text = luhn_summarizer(body["text"])
         
     except Exception as e:
-        return JSONResponse({"ERROR":f"text can't by summarized: {e}"},status_code=400)
+        return JSONResponse({"ERROR":f"text can't by summarized: {e}"},status_code=500)
         
     return JSONResponse({"summarized_text":summy_text},status_code=200)
 
