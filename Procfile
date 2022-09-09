@@ -1,1 +1,1 @@
-web: uvicorn app:app --w 4 --host 0.0.0.0 --port 3000
+web: uvicorn app:app --host=0.0.0.0 --port=${PORT:-5000}
