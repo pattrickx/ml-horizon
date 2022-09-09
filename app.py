@@ -22,10 +22,10 @@ async def summarize(request: Request) -> JSONResponse:
         
     return JSONResponse({"summarized_text":summy_text},status_code=200)
 
-async def summarize(request: Request) -> JSONResponse:
+async def test(request: Request) -> JSONResponse:
     return JSONResponse({"test":"test"},status_code=200)
 routes =[ 
     Mount("/ai",routes=[
         Route('/summarize',endpoint=summarize,methods=["GET"]),
-        Route('/test',endpoint=summarize,methods=["GET"])])
+        Route('/test',endpoint=test,methods=["GET"])])
     ]
