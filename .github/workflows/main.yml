@@ -25,4 +25,3 @@ jobs:
     - name: Run Project
       run: |
         cd src && python3 run.py        
-.
