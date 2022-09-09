@@ -3,7 +3,7 @@ from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.luhn import LuhnSummarizer
 import nltk
-nltk.download('punkt')
+# nltk.download('punkt')
 
 def luhn_summarizer(full_text:str,lang:str="portuguese", sentences_n:int=5) -> str : 
 
