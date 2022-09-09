@@ -25,12 +25,12 @@ jobs:
     - name: Tests
       run: |
         echo Run tests
-    - name: HEROKU Deploy
-      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-      with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "ml-horizon" #Must be unique in Heroku
-        heroku_email: "pattrickpx99@gmail.com"
-        procfile: "web: uvicorn run:app --host "https://ml-horizon.herokuapp.com/" --port ${PORT} --workers 1"
+    # - name: HEROKU Deploy
+    #   uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+    #   with:
+    #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+    #     heroku_app_name: "ml-horizon" #Must be unique in Heroku
+    #     heroku_email: "pattrickpx99@gmail.com"
+    #     procfile: "web: uvicorn run:app --host ${FWD} --port ${PORT} --workers 1"
 
       

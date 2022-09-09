@@ -1,1 +1,1 @@
-web: uvicorn run:app --host "https://ml-horizon.herokuapp.com" --port ${PORT} --workers 1
+web: uvicorn run:app --host ${FWD} --port ${PORT} --workers 1
