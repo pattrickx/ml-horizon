@@ -24,6 +24,7 @@ async def summarize(request: Request) -> JSONResponse:
 
 async def test(request: Request) -> JSONResponse:
     return JSONResponse({"Online":"OK"},status_code=200)
+
 routes =[ Route('/',endpoint=test,methods=["GET"]),
     Mount("/ai",routes=[
         Route('/summarize',endpoint=summarize,methods=["GET"])])
