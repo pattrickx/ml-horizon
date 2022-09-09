@@ -1,1 +1,1 @@
-web: uvicorn run:app --host ${fwd} --port ${PORT} --workers 1
+web: python3 run.py
