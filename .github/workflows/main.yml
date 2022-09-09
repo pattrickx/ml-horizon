@@ -24,8 +24,9 @@ jobs:
         pip install -r requeriments.txt
     - name: Tests
       run: |
-        cat Testes
-    - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        echo Run tests
+    - name: HEROKU Deploy
+      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "ml-horizon" #Must be unique in Heroku
