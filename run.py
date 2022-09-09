@@ -9,4 +9,4 @@ app = Starlette(debug=True,
 
 if __name__=="__main__":
     # uvicorn.run("run:app",workers=10,host='0.0.0.0',port=5000,log_level="debug",reload=True)
-    uvicorn.run("run:app",workers=10,host='0.0.0.0',port=5000,log_level="debug")
+    uvicorn.run("run:app",workers=10,host='0.0.0.0',port=80,log_level="debug")
