@@ -31,6 +31,6 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "ml-horizon" #Must be unique in Heroku
         heroku_email: "pattrickpx99@gmail.com"
-        procfile: "web: uvicorn run:app --port ${PORT} --workers 1"
+        procfile: "web: uvicorn run:app --host "https://ml-horizon.herokuapp.com/" --port ${PORT} --workers 1"
 
       
