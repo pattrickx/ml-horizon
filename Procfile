@@ -1,1 +1,1 @@
-web: uvicorn run:app --port ${PORT}
+web: uvicorn run:app --port ${PORT} -w 4
