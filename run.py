@@ -4,6 +4,7 @@ from app import routes
 import os
 
 print("##### PORT: ",os.getenv("PORT"))
+print("##### PORT: ",os.getenv("fwd"))
 app = Starlette(debug=True,
     routes = routes)
 
