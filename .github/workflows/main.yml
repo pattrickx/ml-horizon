@@ -31,6 +31,7 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "ml-horizon" #Must be unique in Heroku
         heroku_email: "pattrickpx99@gmail.com"
+        procfile: "python3 run.py"
 #    - name: Run Project
 #      run: |
 #        cd src && python3 run.py
