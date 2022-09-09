@@ -1,7 +1,7 @@
 from starlette.routing import Route, Mount
 from starlette.responses import JSONResponse
 from starlette.requests import Request
-from summarization.summarization import luhn_summarizer
+from src.summarization.summarization import luhn_summarizer
 
 
 async def summarize(request: Request) -> JSONResponse:
