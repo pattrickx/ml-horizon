@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment:
-      name:ml-horizon
+      name: ml-horizon
     steps:
     - name: checkout
       uses: actions/checkout@v2
@@ -24,4 +24,5 @@ jobs:
         pip install -r requeriments.txt
     - name: Run Project
       run: |
-        cd src && python3 run.py        
+        cd src && python3 run.py
+      
