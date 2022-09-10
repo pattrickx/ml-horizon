@@ -2,3 +2,4 @@ sumy==0.10.0
 starlette==0.14.2
 uvicorn==0.13.4
 nltk==3.7
+transformers==4.21.3
