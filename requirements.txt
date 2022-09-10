@@ -3,3 +3,5 @@ starlette==0.14.2
 uvicorn==0.13.4
 nltk==3.7
 transformers==4.21.3
+torch==1.12.1
+sentencepiece==0.1.97

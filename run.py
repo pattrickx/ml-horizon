@@ -13,5 +13,5 @@ if __name__=="__main__":
     host_name = socket.gethostname()
     print(host_name )
     print("##### BASE_IRI: ",socket.gethostbyname(host_name))
-    # uvicorn.run("run:app",workers=10,host='0.0.0.0',port=5000,log_level="debug",reload=True)
-    uvicorn.run("run:app",host=socket.gethostbyname(host_name),workers=1,port=int(os.getenv("PORT")),log_level="debug")
+    uvicorn.run("run:app",workers=10,host='0.0.0.0',port=5000,log_level="debug",reload=True)
+    # uvicorn.run("run:app",host=socket.gethostbyname(host_name),workers=1,port=int(os.getenv("PORT")),log_level="debug")

@@ -16,7 +16,7 @@ async def summarize(request: Request) -> JSONResponse:
     
     try: 
         luhn_summy_text = luhn_summarizer(body["text"])
-        hug_summy_text = hug_wikilingua(body["text"])
+        hug_summy_text = hug_ptt5_base_summ_xlsum(body["text"])
         
     except Exception as e:
         return JSONResponse({"ERROR":f"text can't by summarized: {e}"},status_code=500)
