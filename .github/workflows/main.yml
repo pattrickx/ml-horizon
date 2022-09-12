@@ -3,7 +3,7 @@ name: ml-horizon
 on: 
   push:
     branches:
-    - main
+    - heroku
 
 jobs:
   build:
