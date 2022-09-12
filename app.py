@@ -10,12 +10,14 @@ async def summarize(request: Request) -> JSONResponse:
         
         if "text" not in body:
             raise Exception("invalid body, text not found")
+        if "sentences_n" not in body:
+            raise Exception("invalid body, sentences_n not found")
         
     except Exception as e:
         return JSONResponse({"ERROR":e},status_code=500)
     
     try: 
-        summy_text = luhn_summarizer(body["text"])
+        summy_text = luhn_summarizer(body["text"],body["sentences_n"])
         
     except Exception as e:
         return JSONResponse({"ERROR":f"text can't by summarized: {e}"},status_code=500)
@@ -27,5 +29,5 @@ async def test(request: Request) -> JSONResponse:
 
 routes =[ Route('/',endpoint=test,methods=["GET"]),
     Mount("/ai",routes=[
-        Route('/summarize',endpoint=summarize,methods=["GET"])])
+        Route('/summarize',endpoint=summarize,methods=["POST"])])
     ]
