@@ -17,7 +17,7 @@ async def summarize(request: Request) -> JSONResponse:
         return JSONResponse({"ERROR":e},status_code=500)
     
     try: 
-        summy_text = luhn_summarizer(body["text"],body["sentences_n"])
+        summy_text = luhn_summarizer(body["text"],sentences_n=body["sentences_n"])
         
     except Exception as e:
         return JSONResponse({"ERROR":f"text can't by summarized: {e}"},status_code=500)
